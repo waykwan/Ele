@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录</title>
+	<!-- 加载Boots核心样式 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.5, user-scalable=no"/>
+	<link rel="stylesheet" href="../bootcss/bootstrap.min.css">
+	<!-- 加载Boots（主题文件）可以不引入 -->
+	<link rel="stylesheet" href="../bootcss/bootstrap-theme.min.css" />
+	<!-- 加载JQ -->
+	<script type="text/javascript" src="./jquery-3.2.1.min.js"></script>
+	<!-- 加载vue -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="../js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./login.css">
+	<script type="text/javascript" src="./common.js"></script>
+	<script type="text/javascript" src="./login.js"></script>
+</head>
+<body style="overflow-x:hidden;">
+	
+<div id="myUser">
+
+	<div class="logo">
+		  	<img src="./images/logo.jpg">
+		  	<div class="loginSelect">
+		  		<a href="#" id="new" class="loginSelect1 ">
+		      		注册用户
+		    	</a>
+			    <a href="#" id="login" class="">
+			      登录
+			    </a>
+			</div>
+	 </div>
+	<div class="main">
+			<form action="" method="post">
+			  <div class="form-group">
+			    
+			    <input type="text" v-model="username"  class="form-control" @keyup="getUser(username)" placeholder="用户名"  maxlength=13 name="username">
+			    <span class="wrong" v-if="wrongre">用户名重复</span>
+
+			  </div>
+			  <div class="form-group">
+			    
+			    <input type="password" v-model="password" class="form-control"  placeholder="密码" maxlength=20 name="password" oninput="if(value.length>12)value=value.slice(0,12)">
+			    <span class="wrong" v-if="password.length!=0 && password.length<=6 ">密码长度要大于6位,小于12位 </span>
+			  </div>
+
+			   <div class="form-group">
+
+			    <input type="number" v-model="phone" class="form-control"  placeholder="手机" name="phone" oninput="if(value.length>11)value=value.slice(0,11)">	
+			    <span class="wrong" v-if="phone.length!=0&&phone.length!=11">请输入正确的手机号 </span>
+			  </div>
+			
+
+			  <input type="number"  name="num" value="0" style="display: none;">
+			  <section class="MessageLogin">
+	      温馨提示：未注册饿了么帐号的手机号，登录时将自动注册，且代表您已同意
+	      		<a href="#">《用户服务协议》</a></section>
+	      	<span class="wrong" v-if="<%= wrong %>==-1">输入的信息有误</span>
+	      	<button  class="SubmitButton"  >
+		  		注册
+		   	</button>
+		</form>
+		
+	</div>
+	<div class="login">
+		<div class="main2">
+			<form action="" method="post">
+			  <div class="form-group">
+			    <input type="text" class="form-control" v-model="username" placeholder="用户名" name="username">
+			    <span class="wrong" v-if="<%= wrong %>==0">用户名或者密码错误</span>
+
+			  </div>
+
+			  <div class="form-group">
+			    
+			    <input type="password" class="form-control" v-model="password"  placeholder="密码" name="password">
+
+			<input type="" name="" class='aa' value="<%= wrong %>" style='display: none;'>
+			    
+			  </div>
+			 
+	      	<button  class="SubmitButton"  >
+		  		登录
+		   	</button>
+		</form>
+		
+		</div>
+
+		
+
+	</div>
+	
+</div>
+
+
+</body>
+</html>

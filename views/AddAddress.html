@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>添加地址</title>
+	<meta charset="utf-8">
+	<!-- 加载Boots核心样式 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.5, user-scalable=no"/>
+	<link rel="stylesheet" href="bootscss/bootstrap.min.css">
+	<!-- 加载Boots（主题文件）可以不引入 -->
+	<link rel="stylesheet" href="bootscss/bootstrap-theme.min.css" />
+	<!-- 加载JQ -->
+	<script type="text/javascript" src="bootsjs/jquery-3.2.1.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="bootsjs/bootstrap.min.js"></script>
+	<!-- Vue -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/AddAddress.css">
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/AddAddress.js"></script>
+</head>
+<body style="overflow-x:hidden;" >
+	<header>
+		<div class="myHead">
+			<div class="glyphicon glyphicon-chevron-left">
+			</div>
+			<h1>添加地址</h1>
+		</div>
+		
+	</header>
+
+	<div class="maincontent">
+		<!-- 添加地址表单 -->
+		<div class="AddForm">
+			<!-- 联系人 -->
+			<div class="SetForm">
+				<div class="label">
+					联系人
+				</div>
+				<div class="input-group" id="myApp">
+					 <div class="text-input">
+					 	<input type="text" class="form-control"  placeholder="你的姓名" maxlength="20">
+					 </div>
+					 <div class="text-input">
+					 	<span class="form-span man">先生</span>
+					 	<span class="form-span woman">女士</span>
+					 </div>
+
+					 
+				</div>
+			</div>
+			<!--电话-->
+			<div class="SetForm">
+				<div class="label">
+					电话
+				</div>
+				<div class="input-group" id="myApp">
+					 <div class="text-input">
+					 	<input type="text" class="form-control"  placeholder="你的手机号" maxlength="15">
+					 </div>
+					 
+				</div>
+			</div>
+			<!-- 详细地址 -->
+			<div class="SetForm">
+				<div class="label">
+					详细地址
+				</div>
+				<div class="input-group" id="myApp">
+					 <div class="text-input">
+					 	<!-- <input type="text"  > -->
+					 	<textarea class="form-control text-area" placeholder="详细地址(如门牌号等)" maxlength="100"></textarea>
+					 </div>
+					 
+				</div>
+			</div>
+			
+		</div>
+		<div class="form-button">
+				<button class="sure">确定</button>
+			</div>
+
+	</div>
+
+
+</body>
+</html>

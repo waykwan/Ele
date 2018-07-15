@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>搜索</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript" src="bootsjs/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="bootscss/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootscss/bootstrap-theme.min.css">
+	<script type="text/javascript" src="bootsjs/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+</head>
+<body>
+	<div class="App">
+		<!-- 元素头部 -->
+		<section class="ElementHeader">
+			<img src="images/search/button.png" class="return">
+			<form class="searchbox">
+				<img src="images/search/search_button.png" class="searchicon">
+				<input type="search" autofocus="autofocus" placeholder="输入商家、商品名称" class="searchcon">
+				<button type="submit" class="searchbtn">搜索</button>
+			</form>
+		</section>
+		<!-- 搜索标签部分 -->
+		<div class="huntfor" style="padding-bottom: 0px;">
+			<div style="display: none;">
+				<ul>
+					<li role="button">
+						<div class="shop">
+							<img class="shopitem" src="images/search/501e74bf993267cc7a38e1ac03222jpeg.jpeg">
+							<div class="shopitembox">
+								<div>
+									<p class="shopitemcon">
+										<span class="shopitemtext">烤肉拌饭</span>
+									</p>
+								</div>
+								<span class="grade">评价4.5</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 历史记录 -->
+			<section class="history">
+				<!-- 历史头部 -->
+				<header class="historyhead">
+					<span>历史搜索</span>
+					<div class="clean" role="button">
+						<img src="images/search/clean.png">
+					</div>
+				</header>
+			</section>
+			<!-- 历史标签 -->
+			<section class="historytag">
+				<button role="button" class="tag">威士忌</button>
+				<button role="button" class="tag">披萨</button>
+			</section>
+			<!-- 热门搜索 -->
+			<section class="history">
+				<!-- 热门头部 -->
+				<header class="historyhead">
+					<span>热门搜索</span>
+				</header>
+			</section>
+			<!-- 热门标签 -->
+			<section class="historytag">
+				<button role="button" class="tag">同学屋</button>
+				<button role="button" class="tag">麦乐鸡</button>
+				<button role="button" class="tag">原味汤粉王</button>
+				<button role="button" class="tag">沙县小吃</button>
+				<button role="button" class="tag">重庆酸辣粉</button>
+				<button role="button" class="tag">福建千里香</button>
+			</section>
+		</div>
+	</div>
+
+</body>
+</html>

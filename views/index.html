@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+	<meta charset="utf-8">
+	<!-- 可用于媒体查询 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+	<!-- 加载Boots核心样式 -->
+	<link rel="stylesheet" href="bootscss/bootstrap.min.css">
+	<!-- 加载Boots（主题文件）可以不引入 -->
+	<link rel="stylesheet" href="bootscss/bootstrap-theme.min.css" >
+	<!-- 加载公共样式 -->
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<!-- 加载独立index样式 -->
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<!-- 加载Vue -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<!-- 加载JQ -->
+	<script type="text/javascript" src="bootsjs/jquery-3.2.1.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="bootsjs/bootstrap.min.js"></script>
+	<!-- 加载独立js -->
+	<script src="js/common.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<div id="myList" style="display:block;">
+		<a id="up" href="#top" class="moveTop">
+			<img style="width: 1.2rem;" src="images/index/goto.png">
+		</a>
+		<header>
+			<!-- 定位地址 -->
+			<div class="location"> 
+				<div class="control">
+					<a href="javascript:" id="goArdess">
+						<img class="areaImg " src="images/index/location1.png">
+						<span>广州涉外经济职业技术学院</span>
+						<img style="width: .2rem;margin-bottom: .65rem;" src="images/index/location2.png">
+					</a>
+				</div>
+			</div>
+		</header>
+		<main >
+			<!-- 搜索栏 -->
+			<div class="searchBox" style="position: sticky;top: -1px;z-index: 99999">
+				<a href="#" class="content">
+					<img style="width: .35rem;margin-right: .1rem;margin-bottom: .1rem;" src="images/index/search.png">
+					<span>搜索饱宝商家、商品名称</span>
+				</a>
+			</div>
+			<!-- 广告区 -->
+			<div class="advert">
+				<img style="width: 100%;" src="images/index/advert.webp" >
+			</div>
+			<!-- 食品分类区(轮播图) -->
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li class="in" data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li class="in" data-target="#carousel-example-generic" data-slide-to="1"></li>
+				</ol>
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<div class="assortment">
+							<a href="#">
+								<div class="assortImg">
+									<img src="images/index/assortment1.jpeg">
+								</div>
+								<span>美食</span>
+							</a>
+							<a href="#">
+								<div class="assortImg">
+									<img src="images/index/assortment2.jpeg">
+								</div>
+								<span>商超便利</span>
+							</a>
+							<a href="#">
+								<div class="assortImg">
+									<img src="images/index/assortment3.jpeg">
+								</div>
+								<span>果蔬生鲜</span>
+							</a>
+							<a href="#">
+								<div class="assortImg">
+									<img src="images/index/assortment4.jpeg">
+								</div>
+								<span>下午茶</span>
+							</a>
+							<a href="#">
+								<div class="assortImg">
+									<img src="images/index/assortment5.jpeg">
+								</div>
+								<span>医药健康</span>
+							</a>
+							<a href="#">
+								<div class="assortImg">
+									<img src="images/index/assortment6.jpeg">
+								</div>
+								<span>大牌5折</span>
+							</a>
+							<a href="#">
+								<div class="assortImg">
+									<img src="images/index/assortment7.jpeg">
+								</div>
+								<span>浪漫鲜花</span>
+							</a>
+							<a href="#">
+								<div class="assortImg">
+									<img src="images/index/assortment8.jpeg">
+								</div>
+								<span>麻辣烫</span>
+							</a>
+							<a href="#">
+								<div class="assortImg">
+									<img src="images/index/assortment9.jpeg">
+								</div>
+								<span>地方菜系</span>
+							</a>
+							<a href="#">
+								<div class="assortImg">
+									<img src="images/index/assortment10.jpeg">
+								</div>
+								<span>披萨意面</span>
+							</a>
+						</div>
+				  		<div class="carousel-caption">
+				  		</div>
+					</div>
+					<div class="item">
+					  	<div class="assortment">
+							<a href="#">
+								<div class="assortImg">
+									<img src="images/index/assortment11.jpeg">
+								</div>
+								<span>地方小吃</span>
+							</a>
+						</div>
+				  		<div class="carousel-caption">
+				  		</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<a style="display: none;" class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a style="display: none;" class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+			<!-- 活动海报 -->
+			<div class="buyArea">
+				<div class="buyText">
+					<ul>
+						<li class="style1">品质套餐</li>
+						<li class="style2">搭配齐全吃得好</li>
+						<li class="style3">立即抢购 ></li>
+					</ul>
+					<div class="foodImg">
+						<img style="width: 100%;" src="images/index/food.png">
+					</div>
+				</div>
+			</div>
+			<!-- 推荐商家 -->
+			<div class="mainTitle">
+				<span>——</span>
+				推荐商家
+				<span>——</span>
+			</div>
+			<!-- 商家列表 -->
+			<div class="shopList">
+				<div class="shopBox">
+					<div class="information ">
+						<div class="shopLogo">
+							<img src="images/index/shopLogo1.jpeg">
+						</div>
+						<div class="shopTitle">
+							<p class="txt1">波客派（太和大润发店）</p>
+							<div class="txt2">
+								<img src="images/index/light.png">
+								<span class="shopNum">5.0</span>
+								<span>月售1701单</span>
+							</div>
+							<div class="txt3">
+								<span>¥13起送</span>
+								<span class="span">配送费¥1</span>
+							</div>
+						</div>
+					</div>
+					<div class="shopActive">
+						<div class="actList ">
+							<span class="logoList1 listcom">首</span>
+							<span class="on">新用户下单立减17元</span>
+						</div>
+						<div class="actList">
+							<span class="logoList2 listcom">减</span>
+							<span class="on">满20减6，满29减9，满49减17，满75减28</span>
+						</div>
+						<div class="actList in">
+							<span class="logoList2 listcom">减</span>
+							<span class="on">满20减6，满29减9，满49减17，满75减28</span>
+						</div>
+						<div class="actList in">
+							<span class="logoList2 listcom">减</span>
+							<span class="on">满20减6，满29减9，满49减17，满75减28</span>
+						</div>
+						<div class="actList in">
+							<span class="logoList2 listcom">减</span>
+							<span class="on">满20减6，满29减9，满49减17，满75减28</span>
+						</div>
+						<div class="actList in">
+							<span class="logoList2 listcom">减</span>
+							<span class="on">满20减6，满29减9，满49减17，满75减28</span>
+						</div>
+						<div class="listBtn">
+							<span>
+								32个活动
+								<img style="width: .2rem;" src="images/index/open.png">
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="shopBox">
+					<div class="information ">
+						<div class="shopLogo">
+							<img src="images/index/shopLogo2.jpeg">
+						</div>
+						<div class="shopTitle">
+							<p class="txt1">石墨米浆拉肠</p>
+							<div class="txt2">
+								<img src="images/index/light.png">
+								<span class="shopNum">5.0</span>
+								<span>月售1701单</span>
+							</div>
+							<div class="txt3">
+								<span>¥13起送</span>
+								<span class="span">配送费¥1</span>
+							</div>
+						</div>
+					</div>
+					<div class="shopActive">
+						<div class="actList ">
+							<span class="logoList1 listcom">首</span>
+							<span class="on">新用户下单立减17元</span>
+						</div>
+						<div class="actList">
+							<span class="logoList2 listcom">减</span>
+							<span class="on">满20减6，满29减9，满49减17，满75减28</span>
+						</div>
+						<div class="listBtn">
+							<span>
+								32个活动
+								<img style="width: .2rem;" src="images/index/open.png">
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="shopBox">
+					<div class="information ">
+						<div class="shopLogo">
+							<img src="images/index/shopLogo3.jpeg">
+						</div>
+						<div class="shopTitle">
+							<p class="txt1">林记秘方拉肠</p>
+							<div class="txt2">
+								<img src="images/index/light.png">
+								<span class="shopNum">5.0</span>
+								<span>月售1701单</span>
+							</div>
+							<div class="txt3">
+								<span>¥13起送</span>
+								<span class="span">配送费¥1</span>
+							</div>
+						</div>
+					</div>
+					<div class="shopActive">
+						<div class="actList ">
+							<span class="logoList1 listcom">首</span>
+							<span class="on">新用户下单立减17元</span>
+						</div>
+						<div class="actList">
+							<span class="logoList2 listcom">减</span>
+							<span class="on">满20减6，满29减9，满49减17，满75减28</span>
+						</div>
+						<div class="listBtn">
+							<span>
+								32个活动
+								<img style="width: .2rem;" src="images/index/open.png">
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="shopBox">
+					<div class="information ">
+						<div class="shopLogo">
+							<img src="images/index/shopLogo4.jpeg">
+						</div>
+						<div class="shopTitle">
+							<p class="txt1">Q堡堡(涉外学院店)</p>
+							<div class="txt2">
+								<img src="images/index/light.png">
+								<span class="shopNum">5.0</span>
+								<span>月售1701单</span>
+							</div>
+							<div class="txt3">
+								<span>¥13起送</span>
+								<span class="span">配送费¥1</span>
+							</div>
+						</div>
+					</div>
+					<div class="shopActive">
+						<div class="actList ">
+							<span class="logoList1 listcom">首</span>
+							<span class="on">新用户下单立减17元</span>
+						</div>
+						<div class="actList">
+							<span class="logoList2 listcom">减</span>
+							<span class="on">满20减6，满29减9，满49减17，满75减28</span>
+						</div>
+						<div class="listBtn">
+							<span>
+								32个活动
+								<img style="width: .2rem;" src="images/index/open.png">
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="shopBox">
+					<div class="information ">
+						<div class="shopLogo">
+							<img src="images/index/shopLogo5.jpeg">
+						</div>
+						<div class="shopTitle">
+							<p class="txt1">原味汤粉王（涉外北区店）</p>
+							<div class="txt2">
+								<img src="images/index/light.png">
+								<span class="shopNum">5.0</span>
+								<span>月售1701单</span>
+							</div>
+							<div class="txt3">
+								<span>¥13起送</span>
+								<span class="span">配送费¥1</span>
+							</div>
+						</div>
+					</div>
+					<div class="shopActive">
+						<div class="actList ">
+							<span class="logoList1 listcom">首</span>
+							<span class="on">新用户下单立减17元</span>
+						</div>
+						<div class="actList">
+							<span class="logoList2 listcom">减</span>
+							<span class="on">满20减6，满29减9，满49减17，满75减28</span>
+						</div>
+						<div class="listBtn">
+							<span>
+								32个活动
+								<img style="width: .2rem;" src="images/index/open.png">
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer >
+			<ul >
+				<li class="on">
+					<a href="../index">
+						<img src="images/index/index.png">
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="../discover">
+						<img src="images/index/find.png">
+						<p>发现</p>
+					</a>
+				</li>
+				<li>
+					<a href="../order">
+						<img src="images/index/list.png">
+						<p>订单</p>
+					</a>
+				</li>
+				<li>
+					<a href="../My">
+						<img src="images/index/me.png">
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</div>
+	<!-- 搜索定位页面 -->
+	<div class="all" style="display: none;" id="all">
+		<div class="searchTop">
+			<img id="toBack" class="toBack" src="images/index/back.png">
+			<span class="title">选择收获地址</span>
+			<span>新增地址</span>
+		</div>
+		<!-- 输入框 -->
+		<div class="inputBox">
+			<div class="inputAdress">
+				<img class="inputImg" src="images/index/search.png">
+				<input id="bb" type="text" name="" placeholder="请输入地址">
+				<a id="delImg" href="#">
+					<img class="delImg" src="images/index/del.png">
+				</a>
+			</div>
+		</div>
+		<!-- 当前地址 -->
+		<div >
+			<div class="nowArdess">
+				<p>当前地址</p>
+			</div>
+			<div class="ardessName">
+				<h3>上海美术馆</h3>
+				<a href="javascript:" class="locationLogo" id="locat">
+					<img src="images/index/Location.png" id="locatImg">
+					<span>重新定位</span>
+				</a>
+			</div>
+		</div>
+		
+		<!-- 收获地址 -->
+		<div>
+			<div class="nowArdess">
+				<p>收获地址</p>
+			</div>
+			<div class="ardessName in">
+				<span class="h3">李嘉诚</span>&nbsp;
+				<span class="other">
+					先生&nbsp;13225580485
+				</span>
+				<p class="other">汕头市汕头大学</p>
+			</div>
+			<div class="ardessName in">
+				<span class="h3">李世民</span>&nbsp;
+				<span class="other">
+					先生&nbsp;13256984485
+				</span>
+				<p class="other">北京天安门旁李世民冷饮店</p>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

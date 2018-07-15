@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+}
+body{
+    color: gray;
+}
+header{
+    height: 11.733333vw;
+}
+section{
+    display: block;
+}
+.myHead{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11.733333vw;
+    color: #fff;
+    font-size: .48rem;
+    background: #2395ff;
+}
+.glyphicon-chevron-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11.733333vw;
+    height: 11.733333vw;
+}
+h1{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 6.733333vw;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    font-size: 1.2em;
+    line-height: 6.733333vw;
+    transform: translateX(-50%);
+}
+.sectionLogin{
+    display: flex;
+    background: #2395ff;
+    padding: 6.666667vw 4vw;
+    color: #fff;
+    align-items: center;
+}
+.sectionLogin>img{
+    width: 20%;
+    height: 20%;
+}
+.Login-info{
+        overflow: hidden;
+    margin-left: 4.8vw;
+    flex-grow: 1;
+}
+.dl{
+    font-size: .76rem;
+    margin-bottom: 2.133333vw;
+    font-weight: 700;
+}
+.redbag{
+    display: table;
+    width: 100%;
+    height: 2.24rem;
+    height: 22.4vw;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+}
+.bag1,.bag2{
+        border-right: 1px solid #ddd;
+    }
+.allbag{
+    display: table-cell;
+    width: 33.3333%;
+    vertical-align: middle;
+    text-align: center;
+}
+.glyphicon-yen,.glyphicon-gift,.glyphicon-copyright-mark{
+     font-size: .62rem;
+}
+.allbag p{
+    margin-top: 1.333333vw;
+    font-size: .42rem;
+    line-height: 3.733333vw;
+    font-weight: 500;
+    color: #666;
+}
+.sectionSelect{
+    margin-top: 2.666667vw;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: .426667rem;
+    line-height: 4.533333vw;
+    background: #fff;
+}
+.address{
+    font-size: .426667rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding-left: 6.666667vw;
+}
+aside{
+    margin-left: -2.666667vw;
+    margin-right: 2.666667vw;
+    color: skyblue;
+}
+.addressIndex{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3.733333vw 2.666667vw 3.733333vw 0;
+    font-size: .55rem;
+}
+.addressIndex .glyphicon-chevron-right{
+    color: gray;
+}

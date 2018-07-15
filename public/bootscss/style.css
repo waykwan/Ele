@@ -1,0 +1,37 @@
+/*独立样式*/
+.head-nav-sidebar {
+	border-radius: 0px;
+}
+.main {
+	margin: 50px 0 0 0;
+}
+
+.sidebar{
+	position: fixed;
+	top: 50px;
+	bottom: 0px;
+	background: #eee;
+	margin: 0px;
+	padding: 0px;
+}
+
+.nav-sidebar {
+	padding: 10px 0px;
+	margin: 0px;
+}
+
+.nav-sidebar li a{
+	border-radius: 0px;
+}
+
+.nav-sidebar li a:hover {
+	color:#000;
+}
+
+.main-box .row{
+	padding: 0px 20px;
+}
+.main-box .main-box-Cf {
+	margin: 30px 0 0 0;
+	padding: 0px;
+}

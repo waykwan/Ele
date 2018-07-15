@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>换绑手机</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<script type="text/javascript" src="bootsjs/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="bootscss/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootscss/bootstrap-theme.min.css">
+	<script type="text/javascript" src="bootsjs/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/rebind.css">
+</head>
+<body style="background-color: #eee">
+	<div>
+		<!-- 头部 -->
+		<header class="ElementHeader">
+			<div class="infoheader">
+				<div class="ElementHeader-left">
+					<img src="images/discover/download.png" class="top-banner">
+				</div>
+				<h1 class="ElementHeader-center">换绑手机</h1>
+			</div>
+		</header>
+		<div id="myphone">
+			<form  action="" method="post">
+				<div class="userbox">
+					<div class="text1">
+						<b class="texttitle">手机号</b>
+						<!-- 手机号输入 -->
+						<input type="number"  v-model="phone" maxlength="11" class="phone" name="username" oninput="if(value.length>11)value=value.slice(0,11)">
+
+						<button type="button" class="phonebtn butyzm" @click="show_code" style="width:70px;"><span class="but" >获取验证码</span></button>
+
+					</div>
+					<span class="wrong" v-if="phone.length!=0&&phone.length!=11" style="color: red; font-size: .4rem">请输入正确的手机号 </span>
+					<div class="text1">
+						<b class="texttitle">验证码</b>
+						<!-- 验证码输入 -->
+						<input placeholder="请输入验证码" maxlength="4" type="tel"  v-model="code" class="code"@keyup="checkdis">
+					</div>
+					<span class="wrong" v-if="code.length!=0 && code.toLowerCase()!=getcode.toLowerCase() " style="color: red; font-size: .4rem">请输入正确的验证码 </span>
+				</div>
+				<div class="button">
+					<!-- 提交 -->
+					<button  disabled="disabled" type="submit" class="submit" >验证后绑定新手机号</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+        
+        let myphone = new Vue({
+		el:'#myphone',
+		data:{
+			getcode:'',
+			code:'',
+			username:'',
+			password:'',
+			phone:'',
+			// wronguesr:false,
+			wronger:false,
+			listgoods:{},
+		},
+		computed:{
+			
+		
+		},
+
+		methods:{
+			entry:function(){
+				console.log(222)
+				return;
+
+			},
+			getUser:function(username){
+				console.log(username);
+				let that = this; 
+				$.ajax({
+				type:'get',
+				url:'/api/getName/'+ username,
+				dataType:'json',
+				success:function(json){
+					console.log(json)
+					if (json.result == 0) {
+						that.wronger=false;
+						// $().attr();
+					}else{
+						that.wronger=true;
+					}
+				}
+				});
+			},
+			shuffle:function(){
+				let arr=['1','r','Q','4','S','6','w','u','D','I','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',  
+                        'q','2','s','t','8','v','7','x','y','z','A','B','C','9','E','F','G','H','0','J','K','L','M','N','O','P','3','R',  
+                        '5','T','U','V','W','X','Y','Z'];  
+                return arr.sort(function(){  
+                    return (Math.random()-.5);  
+                });  
+			},
+			show_code:function(){
+				if(this.phone.length==11){
+					let ar1='';  
+	                let code=this.shuffle();  
+	                for(let i=0;i<4;i++){  
+	                    ar1+=code[i];  
+	                };  
+	                //var ar=ar1.join('');  
+	                this.getcode=ar1;
+	                $('.but').text(ar1);
+				}else{
+
+					$('.but').text('获取验证码');
+				}
+				
+			},
+			checkdis:function(){
+				console.log(this.phone);
+				if(this.phone.length=11 && this.code.toLowerCase()!=this.getcode.toLowerCase()){
+					$('.submit').attr('disabled','disabled');
+					console.log(111);
+				}else{
+					$('.submit').removeAttr("disabled");
+					console.log(222);
+				}
+			}
+		}
+
+	});
+
+    </script>
+</body>
+</html>

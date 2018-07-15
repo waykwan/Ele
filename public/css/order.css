@@ -1,0 +1,165 @@
+
+
+.navbar-fixed-top{
+	height: 10rem;
+	width: 100%;
+	background-color: #2395ff;
+	background-image: linear-gradient(90deg,#0af,#0085ff);
+}
+span{
+	font-size: 4rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    list-style: none;
+}
+a{
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+}
+body{
+	color: gray;
+}
+header{
+	height: 10rem;
+}
+
+.myHead{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11.733333vw;
+    color: #fff;
+    font-size: .48rem;
+    background: #2395ff;
+}
+.glyphicon-chevron-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10.733333vw;
+    height: 10.733333vw;
+}
+h1{
+	position: absolute;
+    top: 0;
+    left: 50%;
+    height: 6.733333vw;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 6rem;
+    transform: translateX(-50%);
+}
+.order{
+	background-color:#ccc;
+}
+.orderbody{
+	width: 100%;
+
+}
+.ordercard{
+	display: block;
+	width: 100%;
+	height: 35rem;
+	margin: 23px 0 0 0;
+	padding: 32px 0 0 34px;
+	background-color: white;
+}
+.ordercard-avatar{
+	
+}
+.ordercard-body{
+	width: 100%;
+	height: 20rem;
+	border-bottom:1px solid #ccc;
+}
+.ordercard-avatar{
+	width: 10rem;
+	height: 20rem;
+	float: left;
+	padding: 0 36px 0 0;
+}
+.ordercard-avatar img{
+	display: block;
+	width: 7rem;
+	height: 7rem;
+}
+.ordercard-content{
+	width: 87%;
+	height: 20rem;
+	float: left;
+}
+.ordercard-head{
+	width: 100%;
+	height: 10rem;
+	float: left;
+	padding: 0 47px 36px 0;
+	border-bottom:1px solid #ccc;
+}
+.ordercard-detail{
+	width: 100%;
+	height: 10rem;
+	float: left;
+	padding: 30px 47px 30px 0;
+}
+.name{
+	float: left;
+}
+.status{
+	float: right;
+	font-size: 3rem;
+	color: black;
+}
+.content{
+	float: left;
+	font-size: 4rem;
+	color: black;
+}
+.title{
+	width: 100%;
+	height: 5rem;
+	float: left;
+}
+.detail {
+	float: left;
+}
+.datetime{
+	width: 100%;
+	height: 5rem;
+	font-size: 3rem;
+	float: left;
+}
+.price{
+	float: right;
+	font-size: 4rem;
+}
+.ordercard-botttom{
+	width: 100%;
+	height: 10rem;
+	padding:20px 20px; 
+	float: left;
+}
+.cardbutton{
+	padding: 1rem 2rem;
+	border: 1px solid #2395ff;
+	border-radius: .533333vw;
+    background-color: transparent;
+    outline: none;
+    font-size: 4rem;
+    color: #2395ff;
+}
+.aa{
+	float: right;
+}
+.aaa{
+	color: #ff5339;
+    border-color: #ff5339;
+}

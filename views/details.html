@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>清雅花艺</title>
+	<meta charset="utf-8">
+	<!-- 可用于媒体查询 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+	<!-- 加载Boots核心样式 -->
+	<link rel="stylesheet" href="bootscss/bootstrap.min.css">
+	<!-- 加载Boots（主题文件）可以不引入 -->
+	<link rel="stylesheet" href="bootscss/bootstrap-theme.min.css" >
+	<!-- 加载独立index样式 -->
+	<link rel="stylesheet" type="text/css" href="css/details.css">
+	<!-- 加载Vue -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<!-- 加载JQ -->
+	<script type="text/javascript" src="bootsjs/jquery-3.2.1.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="bootsjs/bootstrap.min.js"></script>
+	<!-- 加载公共js -->	
+	<script src="js/common.js"></script>
+	<!-- 加载独立js -->
+	<script src="js/details.js"></script>
+	
+</head>
+<body style="background:#f4f4f4;">
+<div id="myList" >
+	<header >
+		<div class="header">
+			<div class="headTop">
+			</div>
+			<div class="headMid">
+				<img class="headMid_img" src="https://fuss10.elemecdn.com/9/dd/0f008eb1833b0e434efccfffab8e4png.png?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/">
+				<div class="headMid_txt" data-toggle="modal" data-target="#myModal">
+					<h2 class="headMid_name">
+						<span class="">清雅花艺</span>
+						<i class="name_logo"></i>
+					</h2>
+					<div class="shopData">
+						<span class="dataStyle">5</span>&nbsp
+						<span class="dataStyle">月售45单</span>&nbsp
+						<span class="dataStyle">商家配送
+            				<span>约36分钟</span>
+        				</span>&nbsp
+        				<span class="dataStyle">距离20.7km</span>
+					</div>
+					<p class="shopData2">
+						下单必看 1 节日期间鲜花单量大当天送到 不支持指定时间  2 下单备注定花人电话号码 方便紧急情况联系 3 晚上9点后订单第二天开始配送 4 由于鲜花为特殊商品 下单20分钟后不接受退款 5 出现质量和服务问题 请联系我们
+					</p>
+				</div>
+			</div>
+			<div class="headLast" data-toggle="modal" data-target="#Modal">
+				<div class="shopActive">
+					<div class="actNew1">
+						<span class="newLogo">
+							首
+							<span class="txt1">
+								首
+							</span>
+						</span>
+						<span class="txt2">新用户下单立减20元(不与其它活动同享)</span>
+					</div>
+				</div>
+				<div class="actNew2" >
+		 			5个优惠
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main" >
+		<div id="toTop" class="choiceNav">
+			<div  class="choiceCom select">
+				<span id="c1" class="play in">点餐</span>
+			</div>
+			<div class="choiceCom ">
+				<span id="c2" class="play">评价</span>
+			</div>
+			<div  class="choiceCom ">
+				<span id="c3" class="play">商家</span>
+			</div>
+		</div>
+		<!-- 点餐区域 -->
+		<div class="shopBox" id="add"  style="display: block;">
+			<div class="shopArea" >
+				<div class="goShop" >
+					<ul class="shopLeft" id="myList">
+						<!-- <li class="shopStyle shopIn" >
+							<span class="">优惠</span>
+						</li> -->
+						<li class="shopStyle shopIn" v-for="(x,index) in list_name">
+							<span class="">{{x.name}}</span>
+						</li>
+					</ul>
+					<ul class="shopRight">
+						<li class="shopTitle">
+							<div class="titleBox">
+								<strong class="title1">
+									优惠
+								</strong>
+								<span class="title2">
+									美味又实惠, 大家快来抢!
+								</span>
+							</div>
+						</li>
+						<li class="everyShop" v-for="(x,index) in list_shop">
+							<div class="s_box" >
+								<span class="s_imgBox">
+									<img style="width: 2.026667rem;height: 2.026667rem;" :src="x.logoArea">
+								</span>
+								<div class="s_data">
+									<p class="s_name">
+										{{x.name}}
+									</p>
+									<p class="data_other">
+										<span>月售{{x.saleNum}}份</span>
+										<span>好评率{{x.goodWork}}</span>
+									</p>
+									<div class="reduce">
+										<span class="reduce_bg">{{x.discount}}折</span>
+									</div>
+									<strong class="moneyStyle">
+										<span class="money_in">{{x.newPrice}}</span>
+										<del class="money_on">{{x.oldPrice}}</del>
+									</strong>
+									<div class="addShopBtn">
+										<a href="javascript:">
+											<img :src="x.add_logo" class="addImg">
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<!-- 评价区域 -->
+		<div class="assess" id="assess" style="display: none;">
+			<div style="display: flex;">
+				<div class="assessArea1">
+					<h2>5.0</h2>
+					<p>综合评价</p>
+					<p class="assessTxt">高于周边商家70.9%</p>
+				</div>
+				<div class="assessArea2">
+					<p>
+						服务态度
+						<img src="images/details/light.png">
+						<span>5.0</span>
+					</p>
+					<p>
+						菜品评价
+						<img src="images/details/light.png">
+						<span>5.0</span>
+					</p>
+					<p>送达时间&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33分钟</p>
+				</div>
+			</div>
+		</div>
+		<!-- 商家区域 -->
+		<div class="business" id="business" style="display: none;">
+			<div class="businessArea">
+				<p class="send">配送信息</p>
+				<span>由商家配送提供配送，约34分钟送达，距离20.7km</span><br>
+				<span>配送费￥0</span>
+			</div>
+			<div class="businessArea">
+				<p class="send">活动与服务</p>
+				<p>
+					<span class="firstTxt green">首</span>
+					<span>新用户下单立减20元(不与其它活动同享)</span>
+				</p>
+				<p>
+					<span class="firstTxt red">折</span>
+					<span>八折优惠</span>
+				</p>
+				<p>
+					<span class="firstTxt red">减</span>
+					<span>满100减30</span>
+				</p>
+				<p style="position: relative;">
+					<span class="firstTxt in">票</span>
+					<span class="on">该商家支持开发票，开票订单金额200元起，请在下单时填写好发票抬头</span>
+				</p>
+			</div>	
+			<div class="businessArea" >
+				<p class="send">商家实景</p>
+				<div style="position: relative;">
+					<img class="img" src="images/details/businessImg1.png">
+					<span class="photo one">门面1张</span>
+					<img class="img" src="images/details/businessImg2.png">
+					<span class="photo two">大堂1张</span>
+				</div>
+			</div>
+			<div class="businessArea  businessArea2">
+				<div style="width:100%;border-bottom: 1px solid #ddd;">
+					<p class="send">商家信息</p>
+					<span class="businessInfo">
+					所有鲜花下单后新鲜现制作，质量保证。市区免费配送，偏远地区联系客服补运费，节日期间订单量大安排当天送达，不接受指定时间，急单勿拍
+					</span>
+				</div>
+				<ul>
+					<li>
+						<span class="send">品类</span>
+						<span class="info">鲜花</span>
+					</li>
+					<li class="in">
+						<span class="send">商家电话</span>
+						<span class="info">15901757542</span>
+					</li>
+					<li class="in">
+						<span class="send">地址</span>
+						<span class="info">百灵路兴隆西二巷10号101房</span>
+					</li>
+					<li class="in">
+						<span class="send">营业时间</span>
+						<span class="info">01:00-24:00</span>
+					</li>
+				</ul>
+			</div>
+			<div class="businessArea">
+				<p class="send good">
+					营业资质
+					<span>〉</span>
+				</p>
+
+			</div>
+		</div>
+	</div>
+	<footer id="footer">
+		<!-- <div class="footBox">
+			<section class="discounts">满100减30</section>
+		</div> -->
+		<!-- 购物详情模态框 -->
+		<div class="shopTable" >
+			<div class="modal fade" id="shopModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  	<div class="modal-dialog" role="document">
+			    	<div class="modal-content" id="shopTable">
+			      		<div class="modal-header purchased">
+			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="display: none;">
+			        			<span aria-hidden="true">&times;</span>
+			        		</button>
+			        		<div class="modal-title purchasedArea" id="myModalLabel" >
+			        			<span class="span">已购物品</span>
+			        			<span>清空</span>
+			        		</div>
+			      		</div>
+					    <div class="modal-body" style="padding:0;">	
+					      	<ul>
+					      		<li style="margin: 0px 0.5rem;padding: 0.3rem 0px;display: flex;justify-content: space-between;border-top: 1px solid #eceff1">
+					      			<span>玫瑰</span>
+					      			<div class="moneyDate">
+					      				<span class="addColor">￥16</span>
+					      				<img src="images/details/reduce.png">
+					      				<span>1</span>
+					      				<img src="images/details/add.png">
+					      			</div>
+					      		</li>
+					      		<li style="margin: 0px 0.5rem;padding: 0.3rem 0px;display: flex;justify-content: space-between;border-top: 1px solid #eceff1">
+					      			<span>玫瑰</span>
+					      			<div class="moneyDate">
+					      				<span class="addColor">￥16</span>
+					      				<img src="images/details/reduce.png">
+					      				<span>1</span>
+					      				<img src="images/details/add.png">
+					      			</div>
+					      		</li>
+					      	</ul>
+					    </div>
+					   
+			      		<div class="modal-footer">
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+		</div>
+		<div class="shopCat" data-toggle="modal" data-target="#shopModal" id="button">
+			<span class="shopBtn" attr-quantity="0"></span>
+			<div class="moneyBox">
+				<p class="moneyNum">
+					<span>¥0</span> 
+				</p> 
+				<p class="freeAct">
+					免配送费
+				</p>
+			</div>
+			<a href="javascript:;" class="trueBtn1 trueBtn2">
+				<span>¥0起送</span>
+			</a>
+		</div>
+	</footer>
+	<!-- 优惠详情模态框 -->
+	<div class="actBox">
+		<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  	<div class="modal-dialog" role="document">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		        			<span aria-hidden="true">&times;</span>
+		        		</button>
+		        		<h4 class="modal-title" id="myModalLabel">优惠活动</h4>
+		      		</div>
+				    <div class="modal-body">
+				      	<span>首</span>
+				        新用户下单立减20元(不与其它活动同享)
+				    </div>
+				    <div class="modal-body">
+				      	<span>首</span>
+				        新用户下单立减20元(不与其它活动同享)
+				    </div>
+				    <div class="modal-body">
+				      	<span>首</span>
+				        新用户下单立减20元(不与其它活动同享)
+				    </div>
+				    <div class="modal-body">
+				      	<span>首</span>
+				        新用户下单立减20元(不与其它活动同享)
+				    </div>
+		      		<div class="modal-footer">
+		      		</div>
+		    	</div>
+		  	</div>
+		</div>
+	</div>
+	<!-- 商家详情模态框 -->
+	<div class="shopInfo">
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  	<div class="modal-dialog" role="document">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		        			<span aria-hidden="true">&times;</span>
+		        		</button>
+		        		<h4 class="modal-title" id="myModalLabel">清雅花艺</h4>
+		      		</div>
+				    <div class="modal-body">
+				        <table>
+				        	<tr class="trTd">
+				        		<td>5</td>
+				        		<td>43单</td>
+				        		<td>商家配送</td>
+				        		<td>0元</td>
+				        		<td>20.7km</td>
+				        	</tr>
+				        	<tr >
+				        		<td>评分</td>
+				        		<td>月售</td>
+				        		<td>约3分钟</td>
+				        		<td>配送费</td>
+				        		<td>距离</td>
+				        	</tr>
+				        </table>
+				        <span class="talkCom">
+				        	<i>—</i>
+				        	公告
+				        	<i>—</i>
+				        </span>
+				       
+				        <p class="text">
+				        	下单必看 1 鲜花商品特殊下单后现做需要1-3个小时送达。节日期间鲜花单量大当天送到 不支持指定时间 2 下单备注定花人电话号码方便紧急情况联系 3 晚上9点后订单第二天开始配送 4 鲜花为特殊商品下单20分钟后不接受退款 5 出现质量和服务问题请联系我们
+				        </p>
+				        <br>
+				         <span class="talkCom">
+				        	公告内容可滑动
+				        </span>
+				    </div>
+				    <!-- 
+		      		<div class="modal-footer">
+		      		</div> -->
+		    	</div>
+		  	</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	let appList = new Vue({
+		el:'#myList',
+		data:{
+			list_name:[
+				{name:'优惠'},
+				{name:'经典爆款'},
+				{name:'店长推荐'},
+				{name:'精挑细选'},
+				{name:'节日特别'},
+				{name:'蓝色妖姬'},
+				{name:'香槟玫瑰'},
+				{name:'开业花篮'},
+				{name:'会议桌花'},
+				{name:'精品鲜花礼盒'},
+				{name:'精品家庭插花'},
+				{name:'精品家庭插花'},
+				{name:'精品家庭插花'},
+				{name:'精品家庭插花'},
+				{name:'精品家庭插花'},
+				{name:'精品家庭插花'},
+				{name:'精品家庭插花'},
+				{name:'精品家庭插花'},
+				{name:'精品家庭插花'},
+				{name:'精品家庭插花'}
+			],
+			list_shop:[
+				{logoArea:'images/details/follow1.png',name:'19支粉玫瑰花束E002款爱的纪念',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow2.png',name:'33支粉玫瑰花束E003款',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow1.png',name:'19支粉玫瑰花束E002款爱的纪念',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow2.png',name:'33支粉玫瑰花束E003款',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow1.png',name:'19支粉玫瑰花束E002款爱的纪念',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow2.png',name:'33支粉玫瑰花束E003款',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow1.png',name:'19支粉玫瑰花束E002款爱的纪念',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow2.png',name:'33支粉玫瑰花束E003款',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow1.png',name:'19支粉玫瑰花束E002款爱的纪念',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow2.png',name:'33支粉玫瑰花束E003款',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow1.png',name:'19支粉玫瑰花束E002款爱的纪念',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow2.png',name:'33支粉玫瑰花束E003款',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow1.png',name:'19支粉玫瑰花束E002款爱的纪念',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'},
+				{logoArea:'images/details/follow2.png',name:'33支粉玫瑰花束E003款',saleNum:3,goodWork:'100%',discount:3.6,newPrice:178.56,oldPrice:'¥496',add_logo:'images/details/add.png'}
+			],
+			// list_active:[
+
+			// ]
+		}
+	})
+</script>
+</body>
+
+
+</html>

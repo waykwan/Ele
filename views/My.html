@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>我的</title>
+	<meta charset="utf-8">
+	<!-- 可用于媒体查询 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+	<!-- 加载Boots核心样式 -->
+	<link rel="stylesheet" href="bootscss/bootstrap.min.css">
+	<!-- 加载Boots（主题文件）可以不引入 -->
+	<link rel="stylesheet" href="bootscss/bootstrap-theme.min.css" >
+	<!-- 加载独立index样式 -->
+	<link rel="stylesheet" type="text/css" href="css/My.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<!-- 加载Vue -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<!-- 加载JQ -->
+	<script type="text/javascript" src="bootsjs/jquery-3.2.1.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="bootsjs/bootstrap.min.js"></script>
+	<!-- 加载公共js -->	
+	<script src="js/common.js"></script>
+</head>
+<body style="overflow-x:hidden;">
+	<header>
+		<div class="myHead">
+			<div class="glyphicon glyphicon-chevron-left"></div>
+			<h1>我的</h1>
+		</div>
+		
+	</header>
+	<div id="My">
+		<section>
+			<!-- 登录前login 登录后info -->
+			<a class="myinfo" href="../login">
+				<div class="sectionLogin">
+					<img src="images/unknow.jpg">
+					<div class="Login-info">
+						<p class="dl"><%= usename %></p>
+						<p><span class="glyphicon glyphicon-phone"><%= phone %></span></p>
+					</div>
+					<span class="glyphicon glyphicon-chevron-right">
+						
+					</span>
+					<div></div>
+				</div>
+			</a>
+		</section>
+		<div class="redbag">
+			<a href="#" class=" glyphicon glyphicon-yen bag1 allbag">
+				<p>钱包</p>
+			</a>
+			<a href="#" class="glyphicon glyphicon-gift bag2 allbag">
+				<p>红包</p>
+			</a>
+			<a href="#" class="glyphicon glyphicon-copyright-mark allbag">
+				<p>金币</p>
+			</a>
+		</div>
+		<section class="sectionSelect">
+			<a href="#" class="address">
+				<aside class="glyphicon glyphicon-map-marker"></aside>
+				<div class="addressIndex">
+					我的地址 
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</div>
+			</a>
+		</section>
+	</div>
+	<footer >
+		<ul >
+			<li >
+				<a href="../index">
+					<img src="images/index/index.png">
+					<p>首页</p>
+				</a>
+			</li>
+			<li>
+				<a href="../discover">
+					<img src="images/index/find.png">
+					<p>发现</p>
+				</a>
+			</li>
+			<li>
+				<a href="../order">
+					<img src="images/index/list.png">
+					<p>订单</p>
+				</a>
+			</li>
+			<li class="on">
+				<a href="../My">
+					<img src="images/index/me.png">
+					<p>我的</p>
+				</a>
+			</li>
+		</ul>
+	</footer>
+
+
+<script type="text/javascript">
+	let user = '<%= usename %>';
+	if (user != "注册/登录") {
+		$('.myinfo').attr("href","../info")
+	}else{
+		$('.myinfo').attr("href","../login")
+
+	}
+
+
+</script>
+
+
+</body>
+</html>

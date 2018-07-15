@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>账户信息</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript" src="bootsjs/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="bootscss/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootscss/bootstrap-theme.min.css">
+	<script type="text/javascript" src="bootsjs/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/info.css">
+</head>
+<body style="background-color: #eee">
+	<div>
+		<!-- 头部 -->
+		<header class="ElementHeader">
+				<div class="infoheader">
+					<div class="ElementHeader-left">
+						<img src="images/discover/download.png" class="top-banner">
+					</div>
+					<h1 class="ElementHeader-center">账户信息</h1>
+				</div>
+			</header>
+			<!-- 主内容部分 -->
+			<div>
+				<ul class="maininfo">
+					<!-- 头像 -->
+					<li class="mainface">
+						<b>头像</b>
+						<span class="mainimgbox">
+							<input type="file" accept="image/jpeg,image/jpg,image/png" class="mainimginput">
+							<span class="mainimg">
+								<img src="images/info/face.png">
+							</span>
+							<img src="images/info/next.png" class="mainnext">
+						</span>
+					</li>
+					<!-- 用户名 -->
+					<li class="mainid">
+						<b>用户名</b>
+						<span class="mainuser"><%= usename %>
+							<img src="images/info/next.png" class="mainnext"></span>
+					</li>
+				</ul>
+				<h2 class="username">账号绑定</h2>
+				<ul class="maininfo">
+					<li class="mainid">
+						<span>
+							<i class="phoneiconbox">
+								<img src="images/info/phoneicon.png" class="phoneicon">
+							</i>
+							<b>手机</b>
+						</span>
+						<!-- 手机号 -->
+						<span>
+							<span class="mainuser"><%= phone%></span>
+							<img src="images/info/next.png" class="mainnext">
+						</span>
+					</li>
+				</ul>
+				<h2 class="username">安全设置</h2>
+				<ul class="maininfo">
+					<li class="mainid">
+						<span>登录密码</span>
+						<span class="mainuser">
+							<span class="revise">修改</span>
+							<img src="images/info/next.png" class="mainnext">
+						</span>
+					</li>
+				</ul>
+				<button type="button" class="loadout" onclick="javascrtpt:window.location.href='../out'">退出登录</button>
+			</div>
+	</div>
+
+</body>
+</html>

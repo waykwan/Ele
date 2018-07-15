@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: .52rem;
+}
+a{
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+}
+body{
+	color: gray;
+}
+header{
+	height: 11.733333vw;
+}
+section{
+	display: block;
+}
+.myHead{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11.733333vw;
+    color: #fff;
+    font-size: .48rem;
+    background: #2395ff;
+}
+.glyphicon-chevron-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11.733333vw;
+    height: 11.733333vw;
+}
+h1{
+	position: absolute;
+    top: 0;
+    left: 50%;
+    height: 6.733333vw;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    font-size: 1.2em;
+    line-height: 6.733333vw;
+    transform: translateX(-50%);
+}
+
+.addressBottom{
+    position: fixed;
+    bottom: 0;
+    height: 13.866667vw;
+    width: 100%;
+    background: white;
+    display: flex;
+    color: #3190e8;
+    font-size: .426667rem;
+    align-items: center;
+    justify-content: center;
+    border-top: .266667vw solid #ddd;
+}
+.glyphicon-plus-sign{
+    height: 3.333333vw;
+    width: 3.333333vw;
+    display: block;
+    margin-right: 1.6vw;
+}
+.bottomText{
+    height: 5.333333vw;
+    line-height: 5.333333vw;
+}
+main{
+    padding-bottom: 13.866667vw;
+}
+.addressCard{
+    border-top: .266667vw solid #ddd;
+    background-color: #fff;
+    padding: 4vw;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    min-height: 18.133333vw;
+}
+.addressInfo{
+    flex: 1;
+    overflow: hidden;
+    line-height: 1;
+}
+.infoTitle{
+    font-size: .466667rem;
+    margin: 0;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 1.066667vw;
+}
+.infoAddress{
+        color: #666;
+    font-size: .373333rem;
+    margin: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.username{
+    font-weight: 700;
+    color: black;
+}
+.glyphicon-edit{
+    display: flex;
+    align-items: center;
+}
+

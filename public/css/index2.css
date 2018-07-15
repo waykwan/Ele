@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 5rem;
+}
+.form-inline{
+    position: relative;
+    background: #f9f9fa;
+}
+.head-left{
+    display: block;
+    float: left;
+    height: 100%;
+    margin: 10px 10px 10px 20px;
+    color: #585c64;
+}
+.head-left:hover{
+    display: block;
+    float: left;
+    height: 100%;
+    margin: 10px 10px 10px 20px;
+    color: #585c64;
+    text-decoration: none;
+}
+.head-search{
+    display: block;
+    width: 700px;
+   
+    float: left;
+    margin: 10px 0 0 5px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.head-fun{
+    margin: 15px 15px 0 0;
+}
+.item>img{
+    width: 100%;
+    height: 100%;
+}
+#carousel-example-generic{
+    overflow: hidden;
+}
+.carousel-indicators{
+    overflow: hidden;
+    margin: 40px 50px 0 30px;
+
+}
+.carousel-indicators>li{
+    height: 20px;
+    width: 20px;
+}
+.carousel-indicators .active {
+    width: 20px;
+    height: 20px;
+    background: black;
+}
+.container-fluid>img{
+    width: 100%;
+    height: 100%;
+}
+.kind-list{
+    width: 100%;
+    float: left;
+    position: relative;
+    text-align: center;
+    zoom:1;
+}
+.kind-l1{
+    width: 20%;
+    float: left;
+}
+.kind-l1>img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.text-title{
+    width: 100%;
+    font-size: 100%;
+    text-align: center;
+}
+.container>img{
+    width: 100%;
+    height: 100%;
+    margin: 5% 0 0 0;
+}
+.t-all{
+    padding: 1.29333rem 3.125% .66667rem;
+    position: relative;
+}
+.t1{
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    line-height: .50667rem;
+    font-weight: 600;
+}
+.t2{
+    /*width: 20%;*/
+    float: right;
+    top: .37333rem;
+    right: 0;
+    color: #98989f;
+    position: absolute;
+}
+
+
+@media screen and (min-width: 992px){
+   .head-search{
+    display: block;
+    width: 700px;
+   
+    float: left;
+    margin: 10px 0 0 5px;
+    border-radius: 20px;
+    overflow: hidden;
+        }
+        }
+@media screen and (max-width: 768px){
+   .head-search{
+    display: block;
+    width: 200px;
+   
+    float: left;
+    margin: 10px 0 0 5px;
+    border-radius: 20px;
+    overflow: hidden;
+        }
+        }

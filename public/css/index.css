@@ -1,0 +1,376 @@
+*{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+a:hover{
+	text-decoration:none;
+	color: #999;
+}
+/*返回顶部*/
+.moveTop{
+	position: fixed;
+	bottom: 2.3rem;
+    right: .5rem;
+    z-index: 55555;
+    display: none;
+}
+/*############ 头部 ###############*/
+/******定位********/
+.location{
+	padding: .3rem .4rem 0;
+    background-image: linear-gradient(90deg,#0af,#0085ff);
+    height: 1.1rem;
+}
+.location .control{
+	width: 60%;
+    font-weight: 700;
+}
+.location .areaImg{
+	width: .4rem;
+	height: .5rem;
+	margin-bottom: .65rem;
+}
+.location .control span{
+	white-space: nowrap;
+	display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: .8rem;
+	font-size: .48rem;
+	max-width: 80%;
+	color: #fff;
+}
+
+/*############ 中部 ###############*/
+main{
+	width: 100%;
+	margin-bottom: 1.8rem;
+}
+/******搜索********/
+.searchBox{
+	background-image: linear-gradient(90deg,#0af,#0085ff);
+	padding: .25rem .3rem;
+}
+.content{
+	display: block;
+	width: 100%;
+	height: 1rem;
+	border-radius:.1rem;
+    background: #fff;
+    color: #999;
+    padding: 0 2.2rem;
+    font-size: .38rem;
+}
+.content span{
+	text-align: center;
+	line-height: 1rem;
+	font-family: simsun;
+}
+/******广告********/
+.advert{
+	height: 2.9rem;
+}
+/******食品分类********/
+.assortment{
+	background-color: #fff;
+    text-align: center;
+    height: 5rem;
+    overflow: hidden;
+}
+.assortment a{
+	float: left;
+    margin-top: .4rem;
+    width: 20%;
+}
+.assortImg{
+	display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.assortImg img{
+	width: 100%;
+	height: 100%;
+}
+.assortment span{
+	display: block;
+    margin-top: .2rem;
+    color: #666;
+    font-size: .32rem;
+}
+.carousel-indicators{
+	bottom: -4%;
+}
+.carousel-indicators .in{
+	background: #ccc;
+	width: .1rem;
+	height: .1rem;
+	border: .0001rem solid #ccc;
+}
+/******活动海报********/
+.buyArea{
+	margin: 0 .5rem .3rem;
+	height: 3rem;
+}
+.buyText{
+	background: linear-gradient(0deg,#f4f4f4 5%,#fafafa 95%);
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.buyText ul{
+	position: absolute;
+	left: .6rem;
+	top: .3rem;
+}
+.foodImg{
+	position: absolute;
+	width: 4rem;
+	top: 4%;
+	right: 4%;
+}
+.buyText .style1{
+	font-size: .45rem;
+    font-weight: 700;
+    margin-bottom: .13rem;
+    color: #333;
+}
+.buyText .style2{
+	font-size: .34rem;
+    color: #777;
+    margin-bottom: .24rem;
+}
+.buyText .style3{
+	font-size: .32rem;
+    color: #af8260;
+    font-weight: 700;
+}
+.mainTitle{
+	line-height: .96rem;
+	text-align: center;
+    font-size: .4rem;
+    color: #000;
+}
+.mainTitle span{
+	margin:  0 .2rem;
+}
+/******商家列表********/
+.shopBox{
+	border-bottom: .01rem solid #eee;
+    background-color: #fff;
+    color: #666;
+    padding: .4rem 0;
+    font-size: .3rem;
+    line-height: normal;
+}
+.information{
+	padding:  0 .4rem;
+	display: flex;
+}
+.shopLogo{
+	width: 1.75rem;
+	flex: none;
+}
+.shopLogo img{
+	width: 100%;
+	border-radius: .08rem;
+    border: .0233rem solid rgba(0,0,0,.08);
+}
+.shopTitle{
+	width: 80%;
+	padding-left: .26rem;
+	overflow: hidden;
+	padding-bottom: .3rem;
+    border-bottom: .01rem solid #eee;
+}
+.shopTitle .txt1{
+	margin: 0;
+	font-size: .4rem;
+	font-weight: 700;
+	color: #000;
+	margin-bottom: .2rem;
+}
+.shopTitle .txt2{
+	margin-bottom: .2rem;
+}
+.shopNum{
+	margin: 0 .1rem;
+}
+.txt3 .span:before{
+	margin: 0 .1rem 0 .01rem;
+    color: #ddd;
+    content: "|";
+}
+.shopActive{
+	padding-left:.4rem;
+	width: 80%;
+	margin-top: .1rem;
+	margin-left: 20%;
+	position: relative;
+}
+.shopActive .in{
+	display: none;
+}
+.actList{
+	margin-bottom: .1rem;
+}
+.actList .on{
+	width: 60%;
+}
+.actList>span{
+	display: inline-block;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.listcom{
+	padding: .03rem;
+	color: #fff;
+	border-radius: .05rem;
+	margin-right: .1rem;
+}
+.logoList1{
+	background: rgb(112, 188, 70);
+}
+.logoList2{
+	background: rgb(240, 115, 115);
+}
+.listBtn{
+	position: absolute;
+	right: 10%;
+	top: 0;
+}
+/* @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ */
+/*搜索定位*/
+.searchTop{
+	background-image: linear-gradient(90deg,#0af,#0085ff);
+    height: 1.1rem;
+    position: relative;
+    width: 100%;
+}
+.searchTop span{
+	color: #fff;
+	/*font-weight: 500;*/
+	position: absolute;
+	top: 25%;
+	right: 3%;
+	font-size: .4rem;
+}
+.toBack{
+	width: .3rem;
+    position: absolute;
+    top: .3rem;
+    left: .5rem;
+}
+.searchTop .title{
+	top: 23%;
+    left: 32%;
+    font-size: .45rem;
+}
+/*输入框*/
+.all{
+	background: #f4f4f4;
+	height: 20rem;
+}
+.inputBox{
+	width: 100%;
+	padding: .25rem .35rem;
+	background: #fff;
+}
+.inputAdress{
+	width: 100%;
+	background:  #f4f4f4;
+	height: 1rem;
+	position: relative;
+}
+.inputImg{
+	width: .4rem;
+	margin: .2rem .1rem .25rem .25rem;
+}
+.inputAdress input{
+	border: none;
+	background:   #f4f4f4;
+	outline: 0;
+	line-height:1rem;
+	height:1rem; 
+	font-size: .4rem;
+	color: #999;
+	width: 85%;
+}
+.inputAdress a{
+	display: none;
+	width: .2rem;
+	height: .6rem;
+	position: absolute;
+	right: .3rem;
+    top: .2rem;
+}
+.delImg{
+	width: .2rem;
+}
+/*当前&&收获地址*/
+.nowArdess{
+	padding: .45rem 0 .2rem .4rem;
+}
+.nowArdess p{
+	color: #666;
+	font-size: .4rem;
+	margin: 0;
+}
+.ardessName{
+	background: #fff;
+	width: 100%;
+	padding: 0 .4rem;
+	border-bottom:.001rem solid #f4f4f4;
+	position: relative;
+}
+.ardessName h3{
+	width: 60%;
+	margin: 0;
+	font-size: .4rem;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.2rem;
+}
+.locationLogo{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #2395ff;
+	width:27%;
+	font-size: .4rem;
+	display: block;
+	line-height: 1.2rem;
+}
+.locationLogo:hover{
+	color: #2395ff;
+}
+.locationLogo img{
+	width: .37rem;
+    margin-bottom: .15rem;
+	animation: run 0.8s infinite linear ;
+	animation-play-state:paused;
+}
+@keyframes run{
+	0%{
+		transform:rotateZ(360deg);
+	}
+	100%{
+		transform:rotateZ(720deg);
+	}
+}
+.ardessName .h3{
+	margin: 0;	
+	font-size: .4rem;
+    font-weight: 600;
+}
+.other{
+	font-size: .1rem;
+	color: #666;
+	margin-bottom: .1rem;
+}
+.ardessName.in{
+	padding: 0.2rem .4rem 0;
+}
